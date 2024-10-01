@@ -70,8 +70,8 @@ function init() {
   
     // Sync background image
     const slideshowBackgroundImg = document.querySelector('#slideshow-section .slider-img-bg');
-    const slideshowCaption = document.querySelector('#slideshow-section h2');
-    const slideshowDescription = document.querySelector('#slideshow-section span');
+    const slideshowCaption = document.querySelector('#slideshow-section .overlay-text h2');
+    const slideshowDescription = document.querySelector('#slideshow-section .overlay-text span');
   
     function onSlideUpdate(slideIdx)
     {
@@ -80,7 +80,20 @@ function init() {
       const slideDescriptionData = currentSlideElement.getAttribute("data-description");
       slideshowCaption.innerHTML = slideCaptionData;
       slideshowDescription.innerHTML = slideDescriptionData;
-      slideshowBackgroundImg.style.backgroundImage = 'url(' + currentSlideElement.firstElementChild.getAttribute("poster") + ')';
+      
+      let bgSource = null;
+      const slideContentElement = currentSlideElement.firstElementChild;
+      switch (slideContentElement.tagName.toLowerCase()) {
+        case 'img':
+          bgSource = slideContentElement.getAttribute("data-src");
+          break;
+        case 'video':
+          bgSource = slideContentElement.getAttribute("thumbnail-src");
+          break;
+      }
+      if (bgSource != null) {
+        slideshowBackgroundImg.style.backgroundImage = 'url(' + bgSource + ')';
+      }
     }
   
     onSlideUpdate(1);
