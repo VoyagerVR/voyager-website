@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 body {
 	background: #000;
 }
@@ -53,7 +60,9 @@ body {
 }
 
 #voyager-header-target {
-	        transform: translateY(50px);
+	        -webkit-transform: translateY(50px);
+	            -ms-transform: translateY(50px);
+	                transform: translateY(50px);
 }
 
 #header::before {
@@ -78,8 +87,8 @@ body {
 	        transform: translateY(calc(48px + 100%));
 	width: 100%;
 	height: 100px;
-	background: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
 	background: -o-linear-gradient(black, transparent);
+	background: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
 	background: linear-gradient(black, transparent);
 	z-index: 1;
 }
@@ -89,17 +98,26 @@ p {
 	text-align: justify;
 	width: 90%;
 	left: 50%;
-	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
 }
 
 .section {
 }
 
 .other-heading-line {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	justify-items: center;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	gap: 10px;
 	padding-top: 25px;
 }
@@ -128,7 +146,9 @@ p {
 	background-size: 100% 100%;
 	background-position: top;
 	left: 50%;
-	transform: translateX(-50%) rotate(180deg);
+	-webkit-transform: translateX(-50%) rotate(180deg);
+	    -ms-transform: translateX(-50%) rotate(180deg);
+	        transform: translateX(-50%) rotate(180deg);
 	margin-bottom: 25px;
 }
 
@@ -137,7 +157,9 @@ p {
 	width: 85%;
 	position: relative;
 	left: 50%;
-	transform: translate(-50%);
+	-webkit-transform: translate(-50%);
+	    -ms-transform: translate(-50%);
+	        transform: translate(-50%);
 	font-family: "Exo 2";
 	text-transform: none;
 }
@@ -174,9 +196,13 @@ p {
     position: absolute;
     content: "";
     top: 0;
-    transform: translateY(calc(-100%));
+    -webkit-transform: translateY(calc(-100%));
+        -ms-transform: translateY(calc(-100%));
+            transform: translateY(calc(-100%));
     width: 100%;
     height: 100px;
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(black));
+    background: -o-linear-gradient(transparent, black);
     background: linear-gradient(transparent, black);
     z-index: 1;
 	pointer-events: none;

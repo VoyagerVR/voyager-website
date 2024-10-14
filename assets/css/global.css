@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
     --primary-brand: #e79023;
     --primary-brand-accent: #e79023;
@@ -547,8 +554,8 @@ input[type="number"] {
     bottom: 0;
     width: 100%;
     height: 175px;
-    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(black));
     background: -o-linear-gradient(transparent, black);
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(black));
     background: linear-gradient(transparent, black);
     z-index: 0;
     pointer-events: none;
@@ -1055,12 +1062,18 @@ input[type="number"] {
 
 
 .social li > a {
-    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+    -webkit-transition: -webkit-filter 0.15s ease-in-out;
+    transition: -webkit-filter 0.15s ease-in-out;
+    -o-transition: filter 0.15s ease-in-out;
     transition: filter 0.15s ease-in-out;
+    transition: filter 0.15s ease-in-out, -webkit-filter 0.15s ease-in-out;
 }
 
 .social li > a:hover {
-    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
 }
 
 #footer-logo {
@@ -1243,7 +1256,8 @@ input[type="number"] {
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     font-size: 12px;
     -webkit-transition: 0.35s ease-in-out;
     -o-transition: 0.35s ease-in-out;
@@ -1369,9 +1383,16 @@ input[type="number"] {
     position: absolute;
     width: 20px;
     height: 50px;
-    transform: translateY(calc(-50% + 1.5px));
-    filter: grayscale(1);
+    -webkit-transform: translateY(calc(-50% + 1.5px));
+        -ms-transform: translateY(calc(-50% + 1.5px));
+            transform: translateY(calc(-50% + 1.5px));
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+    -webkit-transition: -webkit-filter 0.15s ease-in-out;
+    transition: -webkit-filter 0.15s ease-in-out;
+    -o-transition: filter 0.15s ease-in-out;
     transition: filter 0.15s ease-in-out;
+    transition: filter 0.15s ease-in-out, -webkit-filter 0.15s ease-in-out;
 }
 
 .prev-btn > span,
@@ -1383,12 +1404,20 @@ input[type="number"] {
     background-image: url(../images/slider/navigation-btn.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    -webkit-transition: -webkit-transform 0.15s ease-in-out;
+    transition: -webkit-transform 0.15s ease-in-out;
+    -o-transition: transform 0.15s ease-in-out;
     transition: transform 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
 }
 
 .prev-btn {
-    transform-origin: center;
-    transform: translateY(calc(-50% + 1.6px)) rotate(180deg);
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: translateY(calc(-50% + 1.6px)) rotate(180deg);
+        -ms-transform: translateY(calc(-50% + 1.6px)) rotate(180deg);
+            transform: translateY(calc(-50% + 1.6px)) rotate(180deg);
 }
 
 .slideshow-container .prev-btn {
@@ -1408,22 +1437,29 @@ input[type="number"] {
 
 .prev-btn > span:nth-of-type(2),
 .next-btn > span:nth-of-type(2) {
-    transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+            transform: translateX(-10px);
 }
 
 .prev-btn:hover,
 .next-btn:hover {
-    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
 }
 
 .prev-btn:hover > span:nth-of-type(1),
 .next-btn:hover > span:nth-of-type(1) {
-    transform: translateX(5px);
+    -webkit-transform: translateX(5px);
+        -ms-transform: translateX(5px);
+            transform: translateX(5px);
 }
 
 .prev-btn:hover > span:nth-of-type(2),
 .next-btn:hover > span:nth-of-type(2) {
-    transform: translateX(-5px);
+    -webkit-transform: translateX(-5px);
+        -ms-transform: translateX(-5px);
+            transform: translateX(-5px);
 }
 
 .popup {
@@ -1456,7 +1492,8 @@ input[type="number"] {
     #booking-form .content-container {
         background-image: none;
         background-color: hsla(0, 0%, 0%, 0.75);
-        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
         width: 100vw;
         height: 100vh;
         place-content: center;
@@ -1537,16 +1574,24 @@ input[type="number"] {
 
 .form-wrapper .screenshot {
     height: 200px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .form-wrapper > .double-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .form-wrapper > .double-column > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 12.5px;
 }
 
@@ -1570,7 +1615,10 @@ input[type="number"] {
     }
 
     .form-wrapper > .double-column {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .popup .close-btn {
@@ -1654,7 +1702,9 @@ input[type="number"] {
     #voyager-header-target {
         width: 200px;
         height: 200px;
-        transform: translateY(-25px);
+        -webkit-transform: translateY(-25px);
+            -ms-transform: translateY(-25px);
+                transform: translateY(-25px);
     }
 
     .heading-line {
@@ -1800,24 +1850,32 @@ html.is-animating body {
 @media (min-width: 768px) {
     [scroll-transition="slide-left"]:not([scroll-transition-list]) {
         --slide-offset: 325px;
-        transform: translateX(var(--slide-offset));
+        -webkit-transform: translateX(var(--slide-offset));
+            -ms-transform: translateX(var(--slide-offset));
+                transform: translateX(var(--slide-offset));
     }
 
     [scroll-transition="slide-right"]:not([scroll-transition-list]) {
         --slide-offset: -325px;
-        transform: translateX(var(--slide-offset));
+        -webkit-transform: translateX(var(--slide-offset));
+            -ms-transform: translateX(var(--slide-offset));
+                transform: translateX(var(--slide-offset));
     }
 }
 
 @media (max-width: 768px) {
     [scroll-transition="slide-left"]:not([scroll-transition-list]) {
         --slide-offset: 200px;
-        transform: translateX(var(--slide-offset));
+        -webkit-transform: translateX(var(--slide-offset));
+            -ms-transform: translateX(var(--slide-offset));
+                transform: translateX(var(--slide-offset));
     }
 
     [scroll-transition="slide-right"]:not([scroll-transition-list]) {
         --slide-offset: -200px;
-        transform: translateX(var(--slide-offset));
+        -webkit-transform: translateX(var(--slide-offset));
+            -ms-transform: translateX(var(--slide-offset));
+                transform: translateX(var(--slide-offset));
     }
 }
 

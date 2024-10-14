@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 #steps-section {
     padding: 0;
 }
@@ -231,7 +238,8 @@
         width: 400px;
         height: auto;
         max-height: 250px;
-        object-fit: contain;
+        -o-object-fit: contain;
+           object-fit: contain;
     }
 }
 
@@ -247,7 +255,9 @@
     position: relative;
     width: 80%;
     left: 50%;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
     font-size: 24px;
     margin-top: 100px;
 }
@@ -315,7 +325,9 @@
     width: 85%;
     display: block;
     left: 50%;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
 }
 
 ul.pricing-plan-list > li {
@@ -328,9 +340,13 @@ ul.pricing-plan-list > li {
     margin-top: 200px;
     padding-bottom: 50px;
     padding-right: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 100px;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border-radius: 2em;
 }
 
@@ -342,7 +358,9 @@ ul.pricing-plan-list > li > h4 {
     font-size: 50px;
     right: 0;
     top: 10%;
-    transform: translate(calc(100% - 50%));
+    -webkit-transform: translate(calc(100% - 50%));
+        -ms-transform: translate(calc(100% - 50%));
+            transform: translate(calc(100% - 50%));
 }
 
 ul.pricing-plan-list > li > .type {
@@ -351,7 +369,9 @@ ul.pricing-plan-list > li > .type {
     width: 250px;
     top: 0;
     right: 0;
-    transform: translate(17%, calc(-100% + 39px));
+    -webkit-transform: translate(17%, calc(-100% + 39px));
+        -ms-transform: translate(17%, calc(-100% + 39px));
+            transform: translate(17%, calc(-100% + 39px));
     background-image: url(../images/green-screen-production-section/pricing-plan-corner.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -364,15 +384,24 @@ ul.pricing-plan-list > li > .type h4 {
     position: absolute;
     left: 50%;
     bottom: 50%;
-    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
 }
 
 ul.pricing-plan-list > li > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 10px;
     font-size: 20px;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 ul.pricing-plan-list > li > div:nth-child(1) {
@@ -408,8 +437,12 @@ ul.pricing-plan-list > li > div:nth-child(2) h6 {
 
 ul.pricing-plan-list > li > div:nth-child(2) ul {
     position: relative;
+    display: -ms-grid;
     display: grid;
-    column-gap: 50px;
+    -webkit-column-gap: 50px;
+       -moz-column-gap: 50px;
+            column-gap: 50px;
+    -ms-grid-columns: auto 50px auto;
     grid-template-columns: auto auto;
 }
 
@@ -440,7 +473,10 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
 
 @media (max-width: 1280px) {
     ul.pricing-plan-list > li {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         height: auto;
     }
 
@@ -449,13 +485,17 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
     }
 
     ul.pricing-plan-list > li > div:nth-child(2) ul {
-        column-gap: 25px;
+        -webkit-column-gap: 25px;
+           -moz-column-gap: 25px;
+                column-gap: 25px;
     }
 }
 
 @media (max-width: 768px) {
     ul.pricing-plan-list > li {
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     ul.pricing-plan-list > li > div:nth-child(1) {
@@ -463,8 +503,13 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
     }
 
     ul.pricing-plan-list > li > div:nth-child(2) ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     ul.pricing-plan-list > li > .type {
@@ -486,19 +531,31 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
 
 /* Equipment Range */
 #equipment-hire-section .equipment-range-grid {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
     gap: 10px;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 60px;
 }
 
 #equipment-hire-section .equipment-range-grid > div {
     padding: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 20px;
     font-size: 30px;
     text-align: center;
@@ -507,25 +564,39 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
 #equipment-hire-section .equipment-range-grid .img-container {
     height: 250px;
     aspect-ratio: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     place-content: center;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 #equipment-hire-section .equipment-range-grid .img-container > img {
     height: 100%;
-    filter: drop-shadow(0rem 0rem 10px #ffffff80);
+    -webkit-filter: drop-shadow(0rem 0rem 10px #ffffff80);
+            filter: drop-shadow(0rem 0rem 10px #ffffff80);
 }
 
 #equipment-hire-section .equipment-range-grid .price-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 25px;
 }
 
 #equipment-hire-section .equipment-range-grid .price-list > li {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #equipment-hire-section .equipment-range-grid .price-list > li > span:nth-child(1) {
@@ -555,6 +626,7 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
 /* Hardware and Software */
 #equipment-hire-section .hardware-software-grid {
     position: relative;
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, 1fr);
     margin: 75px;
@@ -564,6 +636,8 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
 }
 
 #equipment-hire-section .hardware-software-grid > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -574,26 +648,43 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
 
 #equipment-hire-section .hardware-software-grid > div > div:nth-child(1) {
     width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #equipment-hire-section .hardware-software-grid > div > div:nth-child(1) .img-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 100%;
 }
 
 #equipment-hire-section .hardware-software-grid > div > div:nth-child(1) .img-container > img {
-    filter: drop-shadow(0rem 0rem 10px #ffffff80);
+    -webkit-filter: drop-shadow(0rem 0rem 10px #ffffff80);
+            filter: drop-shadow(0rem 0rem 10px #ffffff80);
     position: relative;
     max-width: 500px;
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 
 #equipment-hire-section .hardware-software-grid > div > div:nth-child(1) span {
@@ -612,11 +703,18 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
 }
 
 #equipment-hire-section .hardware-software-grid > div > div:nth-child(2) ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 #equipment-hire-section .hardware-software-grid > div > div:nth-child(2) ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     font-size: 24px;
     padding-top: 20px;
@@ -631,19 +729,32 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
     height: 30px;
     aspect-ratio: 1;
     margin-right: 20px;
-    transform: translateY(2.5px);
+    -webkit-transform: translateY(2.5px);
+        -ms-transform: translateY(2.5px);
+            transform: translateY(2.5px);
 }
 
 @media (max-width: 768px) {
     #equipment-hire-section .hardware-software-grid {
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     #equipment-hire-section .hardware-software-grid > div {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     #equipment-hire-section .hardware-software-grid > div > div {
@@ -668,10 +779,18 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
     }
 
     #equipment-hire-section .hardware-software-grid > div > div:nth-child(2) ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     #equipment-hire-section .hardware-software-grid > div > div:nth-child(2) ul li::before {
@@ -694,15 +813,24 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
 
 /* #region Additional Support */
 .support-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 75px;
     margin-left: 0;
     margin-right: 0;
     position: relative;
     font-size: 24px;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
     width: 600px;
     left: 50%;
     gap: 20px;
@@ -720,7 +848,9 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
     font-size: 20px;
     max-width: 1000px;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     margin-bottom: 100px;
 }
 
@@ -749,15 +879,25 @@ ul.pricing-plan-list > li > div:nth-child(2) ul li::before {
 
 @media (max-width: 430px) {
     .left-right-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         text-align: center;
     }
 
     .left-right-list span {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         float: none;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         text-align: center;
     }
 

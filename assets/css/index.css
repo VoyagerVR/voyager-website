@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @media (min-width: 1536px) {
     :root #header {
     --header-scale: 1.1;
@@ -92,11 +99,15 @@
 
 #header-container > .middle .company-description {
     font-size: 20px;
-    transform: translateY(-40px);
+    -webkit-transform: translateY(-40px);
+        -ms-transform: translateY(-40px);
+            transform: translateY(-40px);
 }
 
 #header-container > .middle .btn {
-    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+            transform: translateY(-20px);
 }
 
 #header-container .border {
@@ -114,7 +125,9 @@
 #header .catchphrase {
     font-size: 35px;
     text-shadow: 0 0 20px var(--secondary-brand);
-    transform: translateY(-45px);
+    -webkit-transform: translateY(-45px);
+        -ms-transform: translateY(-45px);
+            transform: translateY(-45px);
 }
 
 #header-bg-text-1,
@@ -219,7 +232,9 @@
 
 #project-section .slider-container .prev-btn {
     left: 50%;
-    transform: translateX(-180px) rotate(180deg);
+    -webkit-transform: translateX(-180px) rotate(180deg);
+        -ms-transform: translateX(-180px) rotate(180deg);
+            transform: translateX(-180px) rotate(180deg);
 }
 
 
@@ -260,12 +275,19 @@
     margin: 0 auto;
     top: 7px;
     left: 5px;
-    object-fit: cover;
-    mask-image: url(../images/project-section/panel-img.webp);
-    mask-repeat: no-repeat;
-    mask-size: 100% 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-mask-image: url(../images/project-section/panel-img.webp);
+            mask-image: url(../images/project-section/panel-img.webp);
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
+    -webkit-transition: none;
+    -o-transition: none;
     transition: none;
-    filter: brightness(0.5);
+    -webkit-filter: brightness(0.5);
+            filter: brightness(0.5);
 }
 
 .panel-item-overlay {
@@ -410,9 +432,13 @@
     position: absolute;
     content: "";
     top: 0;
-    transform: translateY(calc(-100%));
+    -webkit-transform: translateY(calc(-100%));
+        -ms-transform: translateY(calc(-100%));
+            transform: translateY(calc(-100%));
     width: 100%;
     height: 100px;
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(black));
+    background: -o-linear-gradient(transparent, black);
     background: linear-gradient(transparent, black);
     z-index: 1;
 }
@@ -425,7 +451,6 @@
 
 #slideshow-section .heading-line {
     margin-top: 0;
-    padding-top: 0px;
     margin-bottom: 25px;
     width: var(--section-width);
 }
@@ -444,7 +469,8 @@
     width: 100vw;
     height: 100%;
     z-index: 0;
-    filter: blur(10px) brightness(0.3);
+    -webkit-filter: blur(10px) brightness(0.3);
+            filter: blur(10px) brightness(0.3);
     background-size: cover;
     background-position: center;
 }
@@ -645,8 +671,13 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    flex-direction: column;
-    transform: translateY(-90px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transform: translateY(-90px);
+        -ms-transform: translateY(-90px);
+            transform: translateY(-90px);
 }
 
 #header-outside .company-description {
@@ -704,8 +735,10 @@
     height: 179.6px;
     left: 14px;
     top: 5px;
-    mask-image: url(../images/service-section/panel-img.webp);
-    object-fit: cover;
+    -webkit-mask-image: url(../images/service-section/panel-img.webp);
+            mask-image: url(../images/service-section/panel-img.webp);
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 
@@ -776,7 +809,8 @@
     height: 156px;
     left: 2px;
     top: 0px;
-    mask-image: url(../images/service-section/mobile/panel-img.webp);
+    -webkit-mask-image: url(../images/service-section/mobile/panel-img.webp);
+            mask-image: url(../images/service-section/mobile/panel-img.webp);
     }
 
     .grid-item-decor {
@@ -971,6 +1005,8 @@
 
     .grid-container {
     overflow: hidden;
+    -webkit-transition: height 0.5s ease-in-out;
+    -o-transition: height 0.5s ease-in-out;
     transition: height 0.5s ease-in-out;
     }
 
@@ -1036,7 +1072,9 @@
         width: 15px;
         right: -20px;
         top: 1px;
-        transform-origin: center;
+        -webkit-transform-origin: center;
+            -ms-transform-origin: center;
+                transform-origin: center;
         /* transform: translateY(-2px); */
         rotate: 0deg;
     }
