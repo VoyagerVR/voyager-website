@@ -1404,11 +1404,24 @@ input[type="number"] {
     background-image: url(../images/slider/navigation-btn.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+.prev-btn > span:nth-of-type(1),
+.next-btn > span:nth-of-type(1) {
     -webkit-transition: -webkit-transform 0.15s ease-in-out;
     transition: -webkit-transform 0.15s ease-in-out;
     -o-transition: transform 0.15s ease-in-out;
     transition: transform 0.15s ease-in-out;
     transition: transform 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+}
+
+.prev-btn > span:nth-of-type(2),
+.next-btn > span:nth-of-type(2) {
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    transition: -webkit-transform 0.25s ease-in-out;
+    -o-transition: transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
 }
 
 .prev-btn {
@@ -1450,9 +1463,9 @@ input[type="number"] {
 
 .prev-btn:hover > span:nth-of-type(1),
 .next-btn:hover > span:nth-of-type(1) {
-    -webkit-transform: translateX(5px);
-        -ms-transform: translateX(5px);
-            transform: translateX(5px);
+    -webkit-transform: translateX(7.5px);
+        -ms-transform: translateX(7.5px);
+            transform: translateX(7.5px);
 }
 
 .prev-btn:hover > span:nth-of-type(2),
