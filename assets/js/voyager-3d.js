@@ -141,15 +141,10 @@ mouseX = e.clientX;
 function animate() {
     requestAnimationFrame(animate);
 
-    // if (object) {
-    //     rotationYSpinOffset += spinSpeed;
-    //     targetRotationY = -3.075 + (mouseX / width) * 3 + rotationYSpinOffset;
-    //     object.rotation.y += (targetRotationY - object.rotation.y) * rotationSpeed;
-    // }
-
-    if (object)
-    {
-        object.rotation.y = 2;
+    if (object) {
+        rotationYSpinOffset += spinSpeed;
+        targetRotationY = -3.075 + (mouseX / width) * 3 + rotationYSpinOffset;
+        object.rotation.y += (targetRotationY - object.rotation.y) * rotationSpeed;
     }
 
     bloomComposer.render();
